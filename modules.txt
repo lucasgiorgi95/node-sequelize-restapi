@@ -1,0 +1,9 @@
+para iniciar === npm init
+
+modulos principales
+npm i express = frameworck de node que nos sirve para enviar respuestas y recivir peticiones
+npm i morgan = nos sirve para ver en consola las peticionesque van llegando
+npm i sequelize = sequelize puede trabajar con cualquier base de datos y nos pide que instalemos
+                modulos de la base de datos que vamos a manejar
+                npm install --save pg pg-hstore # Postgres este modulo es para que funcione con postgreSQL
+                   
