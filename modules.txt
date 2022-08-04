@@ -7,5 +7,12 @@ npm i sequelize = sequelize puede trabajar con cualquier base de datos y nos pid
                 modulos de la base de datos que vamos a manejar
                 npm install --save pg pg-hstore # Postgres este modulo es para que funcione con postgreSQL
 
+
+instalamos la dependencia
+npm i nodemon que nos permite actualizar la terminal sin tener que estar levantando y tumbandola
+para ver las actualizaciones
+"start": "nodemon src/index.js" // esta es la manera de crear un script para se ejecute el nodemon
+
+
 PARA PODER UTILIZAR IMPORT Y EXPORT EN EL JSON TENEMOS QUE AGREGAR UNA PROPIEDAD QUE SE LLAMA "type":"module"
 los archivos creados por nosotros tienen que ir con su extencion
