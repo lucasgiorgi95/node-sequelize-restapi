@@ -16,3 +16,22 @@ para ver las actualizaciones
 
 PARA PODER UTILIZAR IMPORT Y EXPORT EN EL JSON TENEMOS QUE AGREGAR UNA PROPIEDAD QUE SE LLAMA "type":"module"
 los archivos creados por nosotros tienen que ir con su extencion
+
+
+cuando estamos creando una base de datos relacional lo primero que tenems que hacer es disinar las tablas
+y su relacion
+
+
+vamoc a crear dos tablas:
+
+project  va a tener muchas tareas, pero cac proyecto va a tenre un 'id', nombre, priority, descripcion
+        // a su ves un por puede estar conformado por muchas tareas
+task: va a tener 'id, name, done(hecha o no boolean)', cada una de estas tareas va a pertenecer a un proyecto
+va a tener un valor mas que se va a llamar 'project'
+la relcacion es de uno a muchos  1PROJEC PUEDE TENER MUCHAS TASK 
+
+
+
+
+
+
