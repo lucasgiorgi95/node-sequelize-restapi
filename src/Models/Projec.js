@@ -1,6 +1,6 @@
 import {DataTypes} from "sequelize";
 import { sequelize } from "../DataBase/db.js";
-import { Task } from "./Tasks.js";
+import { Task } from "./Task.js";
 //aca definimos la tabla, que recibira dos parametros el primero es el nombre de la tabla y el segundo es
 //un objeto donde se definen todos los valos que tendra esa tabla
 export const Project = sequelize.define('projects',{
