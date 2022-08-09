@@ -1,5 +1,6 @@
 //aca creamos la logica que van a tener las rutas
 import { Project } from "../Models/Projec.js"
+import { Task } from "../Models/Task.js"
 
 export const getPorojects =async(req, res)=>{
    try {
@@ -76,4 +77,15 @@ export const deleteProject = async(req, res)=>{
     return res.status(500).json({message: error.message})
   }
 
+}
+
+
+export const getProjectTasks = async(req, res)=>{
+  const{id}=req.params
+  const tasks = await Task.findAll({
+    where:{
+      projectId:id
+    }
+  })
+  res.json(tasks)
 }

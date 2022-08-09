@@ -25,3 +25,9 @@ Project.hasMany(Task, {
     foreignKey:'projectId',
     sourceKey:'id'
 })
+
+
+Task.belongsTo(Project, {
+    foreignKey:'projectId',
+    sourceKey:'id'
+})
