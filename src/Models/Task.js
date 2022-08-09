@@ -1,6 +1,3 @@
-
-
-
 import {DataTypes} from "sequelize";
 import { sequelize } from "../DataBase/db.js";
 

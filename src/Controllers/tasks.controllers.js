@@ -28,26 +28,43 @@ export const getTask = async(req, res)=>{
     }
 }
 
-export const createTasks = (req, res)=>{
-    const{}=req.body
+export const createTasks = async(req, res)=>{
+    const{name, done, projectId}=req.body
     try {
-        
+        const newTask = await Task.create({
+            name, 
+            done,
+            projectId,
+        })
+        res.json(newTask)
     } catch (error) {
         return  res.status(500).json({message:error.message})
     }
 }
 
-export const updateTasks = (req, res)=>{
+export const updateTasks = async(req, res)=>{
     try {
-        
+       const {id} = req.params
+       const task= await Task.findByPk(id)
+       task.set(req.body)
+       await task.save()
+
+       res.json(task)
     } catch (error) {
+        console.log(error)
         return res.status(500).json({message:error.message})
     }
 }
 
-export const deleteTasks = (req, res)=>{
+export const deleteTasks = async(req, res)=>{
     try {
-        
+        const {id}=req.params
+        await Task.destroy({
+            where:{
+                id,
+            }
+        })
+        res.status(200).json({message:'Task Destroy'})
     } catch (error) {
         return res.status(500).json({message:error.message})
     }

@@ -66,12 +66,12 @@ export const updateProject = async(req, res)=>{
 export const deleteProject = async(req, res)=>{ 
   try {
     const {id}=req.params
-    await Project.destroy({
+    const project =await Project.destroy({
       where:{
         id,
       }
     })
-    res.status(200).send('Project distroy')
+    res.status(200).json({message:'Project distroy'})
   } catch (error) {
     return res.status(500).json({message: error.message})
   }

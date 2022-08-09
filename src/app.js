@@ -10,5 +10,5 @@ app.use(express.json())
 
 
 app.use(projectRoutes)
-// app.use(tasksRoutes)
+app.use(tasksRoutes)
 export default app;
